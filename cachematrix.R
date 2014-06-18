@@ -10,12 +10,12 @@ makeCacheMatrix <- function(x = matrix()) {
         ## set the matrix
         csh_mtrx <- x
         
-        ## set the values of the matrix and return. Don't compute solve here
-        set <- function (v, r, c){
+        ## set the matrix and return. Don't compute solve here
+        set <- function (y){
                 ## if we're calling set, the constructor is not going to
                 ## clear the cached variable or set a matrix for us
                 csh_inv_mtrx <<- NULL
-                csh_mtrx <<- x
+                csh_mtrx <<- y
         }
         
         ## return the matrix created
